@@ -1,5 +1,5 @@
-# rospy_hello_world
-Simple ROS project in python with snapcraft config
+# ROS Hello World
+Simple ROS project in python with associated snapcraft config
 
 ## Setup
 
@@ -31,23 +31,46 @@ Simple ROS project in python with snapcraft config
   roscore
   rosrun hello_world broadcast.py
   ```
-  Node should start printing messages to terminal @ 10Hz
+  Node will start printing messages to the terminal @ 10Hz
   
 3. Execute with roslaunch
   
   ```
   roslaunch hello_world broadcast.launch
   ```
-  Node should start printing messages to terminal @ 10Hz
+  Node will start printing messages to the terminal @ 10Hz
 
-..to snap..
-sudo apt update
-sudo apt remove lxd-client -y
-sudo snap install lxd
-lxd init --auto
-snap install snapcraft --classic
-cd ~/catkin_ws
-snapcraft --use-lxd
+## Build snap
 
-..after snapping...
-- sudo snap install --devmode <snap_name>
+1. Install tools
+  ```
+  sudo apt update
+  sudo apt remove lxd-client -y
+  sudo snap install lxd
+  lxd init --auto
+  snap install snapcraft --classic
+  ```
+  
+2. Initate snapping
+  ```
+  cd ~/catkin_ws
+  snapcraft --use-lxd
+  ```
+
+## Run snap
+
+1. Find snap name
+  ```
+    ls *snap
+  ```
+
+2. Install snap
+  ```
+  sudo snap install --devmode <snap_name>
+  ```
+
+3. Execute snap
+  ```
+  <snap_name>.launch
+  ```
+  Node will start printing messages to the terminal @ 10Hz
