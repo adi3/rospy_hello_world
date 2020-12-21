@@ -2,4 +2,4 @@
 /devel
 /log
 .DS_Store
-**.snap
+*.snap
