@@ -16,4 +16,4 @@ parts:
     
 apps:
   launch:
-    command: rosrun hello_world talker.py
+    command: roslaunch hello_world broadcast.launch

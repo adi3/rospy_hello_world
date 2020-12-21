@@ -162,7 +162,7 @@ include_directories(
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-catkin_install_python(PROGRAMS nodes/talker.py
+catkin_install_python(PROGRAMS nodes/broadcast.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
