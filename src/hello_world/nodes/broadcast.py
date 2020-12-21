@@ -6,7 +6,7 @@
 import rospy
 from std_msgs.msg import String
 
-topic='broadcaster'
+topic='broadcast'
 message='Hello from AWS'
 
 def broadcast():
