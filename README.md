@@ -71,6 +71,6 @@ Simple ROS project in python with associated snapcraft config
 
 3. Execute snap
   ```
-  hello_world.launch
+  hello-world.launch
   ```
   Node will start printing messages to the terminal @ 10Hz
