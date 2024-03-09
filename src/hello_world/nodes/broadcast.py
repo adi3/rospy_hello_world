@@ -10,6 +10,11 @@ topic='broadcast'
 message='Hello from AWS'
 
 def broadcast():
+    """
+    creates a publisher for a given topic, publishes a message at a specified rate,
+    and runs indefinitely until shutdown is detected.
+
+    """
     pub = rospy.Publisher(topic, String, queue_size=10)
     rospy.init_node('broadcast', anonymous=True)
     rate = rospy.Rate(10) # 10hz
