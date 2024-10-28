@@ -11,8 +11,9 @@ message='Hello from AWS'
 
 def broadcast():
     """
-    Advertises a message on a ROS topic, publishing it at a rate of 10 Hz until
-    the ROS node is shut down. It logs the message at the INFO level before publishing.
+    Publishes a message at a rate of 10 Hz to a specified topic until the ROS node
+    is shut down. It uses a ROS publisher to send the message and a ROS rate to
+    control the publishing frequency.
 
     """
     pub = rospy.Publisher(topic, String, queue_size=10)
