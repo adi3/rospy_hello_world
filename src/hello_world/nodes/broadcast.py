@@ -10,6 +10,12 @@ topic='broadcast'
 message='Hello from AWS'
 
 def broadcast():
+    """
+    Publishes a message at a rate of 10 Hz to a specified topic until the ROS node
+    is shut down. It uses a ROS publisher to send the message and a ROS rate to
+    control the publishing frequency.
+
+    """
     pub = rospy.Publisher(topic, String, queue_size=10)
     rospy.init_node('broadcast', anonymous=True)
     rate = rospy.Rate(10) # 10hz
